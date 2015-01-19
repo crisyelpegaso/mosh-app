@@ -1,4 +1,4 @@
-package com.petiapp.activity;
+package org.mosh.activity;
 
 import java.io.BufferedReader;
 import java.io.IOException;
