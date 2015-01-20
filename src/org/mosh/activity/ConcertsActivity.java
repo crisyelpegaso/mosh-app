@@ -8,25 +8,31 @@ import java.io.InputStreamReader;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.mosh.R;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.mosh.R;
 
 public class ConcertsActivity extends Activity {
 
 	private static String endpoint = "http://10.32.100.88:8080/mosh-services";
 	private TextView content;
 
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu){
+		MenuInflater menuInflater = getMenuInflater();
+		menuInflater.inflate(R.menu.main, menu);
+		return super.onCreateOptionsMenu(menu);
+	}
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 
