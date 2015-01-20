@@ -1092,14 +1092,14 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f090002;
         public static final int action_menu_presenter=0x7f090003;
         public static final int action_mode_close_button=0x7f090024;
-        public static final int action_search=0x7f09003e;
-        public static final int action_settings=0x7f09003f;
+        public static final int action_search=0x7f090040;
+        public static final int action_settings=0x7f090041;
         public static final int activity_chooser_view_content=0x7f090025;
         public static final int always=0x7f09000f;
         public static final int beginning=0x7f090016;
         public static final int checkbox=0x7f09002d;
         public static final int collapseActionView=0x7f090010;
-        public static final int content=0x7f09003d;
+        public static final int content=0x7f09003f;
         public static final int default_activity_button=0x7f090028;
         public static final int dialog=0x7f090014;
         public static final int disableHome=0x7f090009;
@@ -1108,7 +1108,7 @@ containing a value of this type.
         public static final int end=0x7f090017;
         public static final int expand_activities_button=0x7f090026;
         public static final int expanded_menu=0x7f09002c;
-        public static final int get_concerts=0x7f09003c;
+        public static final int get_concerts=0x7f09003d;
         public static final int home=0x7f090000;
         public static final int homeAsUp=0x7f09000a;
         public static final int icon=0x7f09002a;
@@ -1129,8 +1129,10 @@ containing a value of this type.
         public static final int search_close_btn=0x7f090038;
         public static final int search_edit_frame=0x7f090034;
         public static final int search_go_btn=0x7f09003a;
+        public static final int search_input=0x7f09003c;
         public static final int search_mag_icon=0x7f090035;
         public static final int search_plate=0x7f090036;
+        public static final int search_results=0x7f09003e;
         public static final int search_src_text=0x7f090037;
         public static final int search_voice_btn=0x7f09003b;
         public static final int shortcut=0x7f09002e;
@@ -1251,6 +1253,8 @@ containing a value of this type.
         /**  Commons 
          */
         public static final int button_search=0x7f0a0010;
+        public static final int search_input=0x7f0a0011;
+        public static final int search_results=0x7f0a0012;
     }
     public static final class style {
         /** 

@@ -9,5 +9,7 @@
     
     <!-- Commons -->
     <string name="button_search">Search</string>
+    <string name="search_input">Search for concert</string>
+    <string name="search_results">Search Results: </string>
 
 </resources>
