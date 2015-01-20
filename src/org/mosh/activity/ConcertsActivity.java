@@ -19,6 +19,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,6 +27,7 @@ public class ConcertsActivity extends Activity {
 
 	private static String endpoint = "http://10.32.100.88:8080/mosh-services";
 	private TextView content;
+	EditText searchInput;
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu){
@@ -55,7 +57,7 @@ public class ConcertsActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.concerts_main);
 
-//		String searchInput = ((EditText) findViewById(R.id.search_input)).getText().toString();
+		searchInput = ((EditText) findViewById(R.id.search_input));
 		
 		content   =  (TextView)findViewById(R.id.content);
 		Button saveme = (Button) findViewById(R.id.get_concerts);
@@ -70,14 +72,11 @@ public class ConcertsActivity extends Activity {
 						"Please wait, connecting to server.", Toast.LENGTH_LONG)
 						.show();
 
-				HttpClient Client = new DefaultHttpClient();
-
 				// Create URL string
-
-				String URL = endpoint + "/concerts";
+				String URL = endpoint + "/artists?name=" + searchInput.getText().toString();
 
 				try {
-					new GetConcertsTask().execute(URL);
+					new GetArtistsTask().execute(URL);
 				} catch (Exception ex) {
 					content.setText("Failed : " + ex.toString());
 				}
@@ -118,6 +117,47 @@ public class ConcertsActivity extends Activity {
 		            
 		            if (result == ""){
 		            	return "FAILED IN TASK";
+		            }
+		     
+		        return result;
+		}
+
+	}
+	
+	
+	public class GetArtistsTask extends AsyncTask<String, Void, String> {
+		
+		@Override
+		protected void onPostExecute(String result){
+			content.setText(result);
+		}
+		
+		@Override
+		protected String doInBackground(String... urls) {
+			String url= (String)urls[0]; 
+			InputStream inputStream = null;
+		        String result = "";
+		 
+		            // create HttpClient
+		            HttpClient httpclient = new DefaultHttpClient();
+		 
+		            try{
+		            	// make GET request to the given URL
+			            HttpResponse httpResponse = httpclient.execute(new HttpGet(url));
+			 
+			            // receive response as inputStream
+			            inputStream = httpResponse.getEntity().getContent();
+			 
+			            // convert inputstream to string
+			            if(inputStream != null){
+			            	result = convertInputStreamToString(inputStream);
+			            } 
+		            }catch(Exception e){
+		            	result = "An error ocurred";
+		            }
+		            
+		            if (result == ""){
+		            	return "No results found";
 		            }
 		     
 		        return result;
