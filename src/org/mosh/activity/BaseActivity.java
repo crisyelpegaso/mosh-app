@@ -10,6 +10,11 @@ import android.view.MenuItem;
 
 public class BaseActivity extends ActionBarActivity  {
 
+	public final static String EXTRA_MESSAGE = "org.mosh.MESSAGE";
+
+	protected static String endpoint = "http://10.32.0.128:8080/mosh-services";
+	
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 	    // Inflate the menu items for use in the action bar
