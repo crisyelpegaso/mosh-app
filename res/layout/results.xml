@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context="org.mosh.activity.ResultsActivity" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="@string/title_results"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+
+    </LinearLayout>

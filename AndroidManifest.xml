@@ -3,26 +3,42 @@
     package="org.mosh"
     android:versionCode="1"
     android:versionName="1.0" >
-    
-    <uses-sdk android:minSdkVersion="11"
-        android:targetSdkVersion="22"/>
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="22" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:allowBackup="false"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" 
-        android:allowBackup="false">
+        android:theme="@style/AppTheme" >
+
+        <!-- Main Activity -->
         <activity
-            android:name="org.mosh.activity.ConcertsActivity"
+            android:name="org.mosh.activity.FeaturedActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="org.mosh.activity.SearchActivity"
+            android:label="@string/app_name" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="org.mosh.activity.FeaturedActivity" />
+        </activity>
+        
+        <activity
+            android:name="org.mosh.activity.ResultsActivity"
+            android:label="@string/app_name" >
         </activity>
     </application>
 
