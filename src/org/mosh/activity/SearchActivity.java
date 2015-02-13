@@ -11,7 +11,6 @@ import android.widget.TextView;
 public class SearchActivity extends BaseActivity {
 
 	private static String endpoint = "http://10.32.100.88:8080/mosh-services";
-	private TextView content;
 	EditText searchInput;
 
 	@Override

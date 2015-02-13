@@ -13,12 +13,15 @@
     <string name="search_results">Search Results: </string>
     
     <!-- Featured Activity -->
-    <string name="title_featured">Featured</string>
+    <string name="title_featured">Featured Concerts</string>
 
     <!-- Search Activity -->
     <string name="title_search">Search</string>
     
      <!-- Results Activity -->
      <string name="title_results">Results</string>
+     
+	 <!-- Concert Activity -->
+     <string name="title_concert">Concert</string>
     
 </resources>

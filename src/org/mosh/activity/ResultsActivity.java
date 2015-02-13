@@ -19,7 +19,7 @@ import android.widget.Toast;
 
 public class ResultsActivity extends BaseActivity {
 
-	private static String endpoint = "http://10.32.100.88:8080/mosh-services";
+	private static String endpoint = "http://10.32.0.128:8080/mosh-services";
 	
 	 // This is the Adapter being used to display the list's data
     private TextView content;
@@ -27,8 +27,8 @@ public class ResultsActivity extends BaseActivity {
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        content = (TextView) findViewById(R.id.content);
         setContentView(R.layout.results);
+        content = (TextView) findViewById(R.id.content);
      // ALERT MESSAGE
      		Toast.makeText(getBaseContext(),
      				"Searching ....", Toast.LENGTH_LONG)
