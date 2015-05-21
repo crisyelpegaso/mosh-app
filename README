@@ -1,0 +1,21 @@
+***************************************
+	IMPORTANT
+***************************************
+This project was started in Eclipse ADT. In Android Studio you need to import it as a Eclipse ADT project and it will generate a copy with IntelliJ project structure.
+This needs to be changed, to support Android Studio properly.
+
+************************************
+	Main Activities
+************************************
+
+FeaturedActity : main activity, is created when the application starts. It displays all featured and recommended bands.
+SearchActivity : activity with text input to search a particular band or concert name.
+ResultsActivity : displays results brought by SearchActivity.
+ConcertActivity : shows details and description of a particular concert selected.
+
+************************************
+	Layouts
+************************************
+
+Every activity has a layout assigned with the same name. i.e : SearchActivity uses a search.xml file layout.
+To describe layout of item in a list view it uses the layout files list_${activityName}.xml. [THIS MAY NOT BE THE BEST PRACTICE, SHOULD BE CHANGED]
