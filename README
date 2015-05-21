@@ -1,8 +1,18 @@
 ***************************************
 	IMPORTANT
 ***************************************
+
 This project was started in Eclipse ADT. In Android Studio you need to import it as a Eclipse ADT project and it will generate a copy with IntelliJ project structure.
 This needs to be changed, to support Android Studio properly.
+
+***************************************
+	TECHNICAL REQUIREMENTS
+***************************************
+
+Nowadays it uses API Level 22 (Android 5.1, Lollipop release).
+The minimum version supported is Level 11 (Android 3.0, Honey Comb release).
+It uses internet connection to communicate with mosh server [SERVER CONFIGURATION MUST BE OUTSIDE THE CODE, THIS MUST BE MODIFIED]
+
 
 ************************************
 	Main Activities
@@ -12,6 +22,7 @@ FeaturedActity : main activity, is created when the application starts. It displ
 SearchActivity : activity with text input to search a particular band or concert name.
 ResultsActivity : displays results brought by SearchActivity.
 ConcertActivity : shows details and description of a particular concert selected.
+
 
 ************************************
 	Layouts
