@@ -10,8 +10,10 @@
     <!-- Commons -->
     <string name="button_search">Search</string>
     <string name="search_input">Search for concert</string>
+    <string name="searching_toast">Searching...</string>
     <string name="search_results">Search Results: </string>
-    
+    <string name="no_results_found">No Results Found</string>
+
     <!-- Featured Activity -->
     <string name="title_featured">Featured Concerts</string>
 

@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 public class SearchActivity extends BaseActivity {
 
-	private static String endpoint = "http://10.32.100.88:8080/mosh-services";
 	EditText searchInput;
 
 	@Override
@@ -20,14 +19,14 @@ public class SearchActivity extends BaseActivity {
 		setContentView(R.layout.search);
 
 		searchInput = ((EditText) findViewById(R.id.search_input));
-		
-	}
-	
-	public void searchConcerts(View view) {
-		
-		Intent intent = new Intent(this, ResultsActivity.class);
-	    startActivity(intent);
 
 	}
-	
+
+	public void searchConcerts(View view) {
+
+		Intent intent = new Intent(this, ResultsActivity.class);
+		startActivity(intent);
+
+	}
+
 }
