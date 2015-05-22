@@ -12,6 +12,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.mosh.R;
 
 import java.io.InputStream;
+import org.mosh.util.parse.ParseServerResponseUtil;
 
 public class ResultsActivity extends BaseActivity {
 

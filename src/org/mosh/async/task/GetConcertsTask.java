@@ -9,6 +9,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.mosh.adapter.ConcertAdapter;
 import org.mosh.domain.Concert;
+import org.mosh.util.parse.ParseServerResponseUtil;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ public class GetConcertsTask extends AsyncTask<String, Void, List<Concert>> {
     private ConcertAdapter concertsListAdapter;
 
     public GetConcertsTask(Context context, ConcertAdapter concertsListAdapter){
+
         this.context = context;
         this.concertsListAdapter = concertsListAdapter;
     }
